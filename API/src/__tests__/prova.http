@@ -1,0 +1,23 @@
+###
+//CADASTRAR
+POST   http://localhost:3000/computador/cadastrar
+Content-Type: application/json
+
+{
+    "dono": "ninguem",
+    "placamae": "nenhuma",
+    "processador": "o bom",
+    "memoria": 16,
+    "armazenamento": "quase nada",
+    "fonte": "de energia"
+}
+
+//LISTAR
+###
+GET http://localhost:3000/computador/listar
+
+
+//DELETAR
+###
+DELETE   http://localhost:3000/computador/remover/60e38ace89ab170dc3f77d8e
+
