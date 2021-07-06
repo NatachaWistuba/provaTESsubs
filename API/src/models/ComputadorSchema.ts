@@ -4,7 +4,7 @@ const computadorSchema = new Schema(
 {
     dono: {
         type: String,
-        required: [true, " O campo NOME é obrigatório! "],
+        required: [true, " O campo DONO é obrigatório! "],
     },
     placamae: {
         type: String,

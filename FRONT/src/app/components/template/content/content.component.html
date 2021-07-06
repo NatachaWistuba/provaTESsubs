@@ -1,0 +1,22 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list>
+            <mat-list-item>
+                <a mat-list-item routerLink="">Listar</a>
+            </mat-list-item>
+        </mat-nav-list>
+        <mat-nav-list>
+            <mat-list-item>
+                <a mat-list-item routerLink="/computador/cadastrar">Cadastrar</a>
+            </mat-list-item>
+        </mat-nav-list>
+        <mat-nav-list>
+            <mat-list-item>
+                <a mat-list-item routerLink="/computador/remover/:id">Deletar</a>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

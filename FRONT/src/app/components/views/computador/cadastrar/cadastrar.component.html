@@ -1,0 +1,82 @@
+<mat-card>
+    <mat-card-title> Novo cadastrado de Computador</mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label for="dono">Dono </mat-label>
+        <input
+          matInput
+          placeholder="Informe o dono"
+          type="text"
+          nome="dono"
+          [(ngModel)]="dono"
+        />
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label for="placamae">Placa Mãe </mat-label>
+        <input
+          matInput
+          placeholder="Informe a placa mãe"
+          type="text"
+          nome="placamae"
+          [(ngModel)]="placamae"
+        />
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label for="processador">Processador</mat-label>
+        <input
+          matInput
+          placeholder="Informe o Processador"
+          type="text"
+          nome="processador"
+          [(ngModel)]="processador"
+        />
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label for="memoria">Memória </mat-label>
+        <input
+          matInput
+          placeholder="Informe a memória"
+          type="number"
+          nome="memoria"
+          [(ngModel)]="memoria"
+        />
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label for="armazenamento">Armazenamento </mat-label>
+        <input
+          matInput
+          placeholder="Informe o Armazenamento"
+          type="text"
+          nome="armazenamento"
+          [(ngModel)]="armazenamento"
+        />
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label for="fonte">Fonte </mat-label>
+        <input
+          matInput
+          placeholder="Informe a fonte"
+          type="text"
+          nome="fonte"
+          [(ngModel)]="fonte"
+        />
+      </mat-form-field>
+      <br>
+      
+      
+      <button mat-raised-button color="accent" (click)="cadastrar()">
+        Cadastrar
+      </button>
+    </mat-card-content>
+  </mat-card>

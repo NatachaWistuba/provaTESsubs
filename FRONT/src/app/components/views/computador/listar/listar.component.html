@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="cadastros"       class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros._id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dono">
+        <th mat-header-cell *matHeaderCellDef> Nome</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros.dono}} </td>
+    </ng-container>
+    <ng-container matColumnDef="placamae">
+        <th mat-header-cell *matHeaderCellDef> Placa Mãe</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros.placamae}} </td>
+    </ng-container>
+    <ng-container matColumnDef="processador">
+        <th mat-header-cell *matHeaderCellDef> Processador</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros.processador}} </td>
+    </ng-container>
+    <ng-container matColumnDef="memoria">
+        <th mat-header-cell *matHeaderCellDef> Memória</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros.memoria}} </td>
+    </ng-container>
+    <ng-container matColumnDef="armazenamento">
+        <th mat-header-cell *matHeaderCellDef> Armazenamento</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros.armazenamento}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fonte">
+        <th mat-header-cell *matHeaderCellDef> Fonte</th>
+        <td mat-cell *matCellDef="let cadastros"> {{cadastros.fonte}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -7,12 +7,22 @@ class ComputadorController {
 
   async cadastrar(request: Request, response: Response) {
     try{
-      const novoCadastro = await ComputadorSchema.create(request.body);
-      console.log(novoCadastro);
-      response.status(201).json({objeto: novoCadastro,
-         msg:"Ciclo cadastrado com sucesso",
-         erro: false
-    });
+        const {dono} = request.body;
+        const pc = await ComputadorSchema.find({dono});
+        if (pc.length == 0){
+            const novoCadastro = await ComputadorSchema.create(request.body);
+    
+            console.log(novoCadastro);
+            response.status(201).json({objeto: novoCadastro,
+                msg:"Cadastrado com sucesso",
+                erro: false
+            });
+        } else {
+            response.status(400).json({
+                msg: "Existe um computador para este dono",
+                error: true
+                }); 
+        }
   } catch (error){
     response.status(400).json({
 	objeto: error,
@@ -30,10 +40,10 @@ class ComputadorController {
     async deletar(request: Request, response: Response) {
         try {
             const { id } = request.params;
-            const classe =  await ComputadorSchema.deleteOne({_id: id});
+            const computador =  await ComputadorSchema.deleteOne({_id: id});
 
             response.status(201).json({
-                objeto: classe,
+                objeto: computador,
                 msg: "deletado com sucesso!",
                 erro: false,
             });
